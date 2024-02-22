@@ -1765,8 +1765,10 @@ function rcwarning(arg)
 		if Spellups["GL"]["mainWindow"] == "yes" then
 			 if Spellups["MS"]["channel"] == "echo" or Spellups["MS"]["channel"] == "print" then
 				  hadarprint(message)
+				  if currentState == 8 then PlaySound(0, "curse.wav") end
 			 else
 				  SendSpecial(Spellups["MS"]["channel"] .. " " ..message)
+				  if currentState == 8 then PlaySound(0, "curse.wav") end
 			 end
 		end
 		
